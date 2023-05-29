@@ -60,7 +60,7 @@ export default class CrosswordContent {
       }
 
       if (errorMessages.length) {
-        console.warn(`H5P.Crossword: ${errorMessages.join(' ')}`);
+        console.warn(`H5P.PimenkoCrossword: ${errorMessages.join(' ')}`);
       }
 
       if (!grid) {
@@ -129,7 +129,7 @@ export default class CrosswordContent {
         tableWrapper.appendChild(this.solutionWord.getDOM());
       }
       else {
-        console.warn('H5P.Crossword: There are not enough matching characters for the overall solution word in the crossword.');
+        console.warn('H5P.PimenkoCrossword: There are not enough matching characters for the overall solution word in the crossword.');
       }
     }
 

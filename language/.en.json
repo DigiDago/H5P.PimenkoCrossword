@@ -188,6 +188,9 @@
           "default": "Show solution"
         },
         {
+          "label": "Text for add a solution custom"
+        },
+        {
           "label": "Cannot create crossword",
           "default": "Could not generate a crossword with the given words. Please try again with fewer words or words that have more characters in common."
         },

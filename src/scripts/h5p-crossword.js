@@ -47,6 +47,7 @@ export default class Crossword extends H5P.Question {
         couldNotGenerateCrosswordTooFewWords: 'Could not generate a crossword. You need at least two words.',
         problematicWords: 'Some words could not be placed. If you are using fixed words, please make sure that their position doesn\'t prevent other words from being placed. Words with the same alignment may not be placed touching each other. Problematic word(s): @words',
         showSolution: 'Show solution',
+        solutionCustomText: null,
         tryAgain: 'Retry',
         extraClue: 'Extra clue',
         closeWindow: 'Close window',
@@ -353,6 +354,16 @@ export default class Crossword extends H5P.Question {
 
     this.hideButton('check-answer');
     this.hideButton('show-solution');
+
+    // Show custome solution text.
+    if (this.params.l10n.solutionCustomText !== null) {
+      let htmlcontentsolutiontext = document.createElement('div');
+      htmlcontentsolutiontext.innerHTML = this.params.l10n.solutionCustomText;
+      htmlcontentsolutiontext.classList.add('h5p-question-solutioncustomtext');
+
+      let feedbackElement = document.querySelector(".h5p-question-buttons");
+      feedbackElement.parentNode.insertBefore(htmlcontentsolutiontext, feedbackElement);
+    }
 
     this.content.showSolutions();
 

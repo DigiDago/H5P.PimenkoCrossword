@@ -1,13 +1,13 @@
 {
-  "title": "Crossword",
+  "title": "Crossword - Pimenko version",
   "description": "Crossword puzzle for H5P",
   "majorVersion": 0,
-  "minorVersion": 5,
-  "patchVersion": 2,
+  "minorVersion": 1,
+  "patchVersion": 12,
   "runnable": 1,
-  "author": "Language Training Center GmbH, Oliver Tacke",
+  "author": "Original by Language Training Center GmbH, Oliver Tacke - Edited by Pimenko",
   "license": "MIT",
-  "machineName": "H5P.Crossword",
+  "machineName": "H5P.PimenkoCrossword",
   "embedTypes": [
     "iframe"
   ],

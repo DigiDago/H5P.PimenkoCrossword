@@ -156,6 +156,10 @@
           "label": "Activer le bouton \"Recommencer\""
         },
         {
+          "label": "Texte de la correction à afficher en dessous de l'activité",
+          "description": "Texte de la correction à afficher en dessous de l'activité"
+        },
+        {
           "label": "Activer le bouton \"Solution\""
         }
       ]
@@ -186,6 +190,9 @@
         {
           "label": "Étiquette pour le bouton \"Afficher la solution\"",
           "default": "Afficher la solution"
+        },
+        {
+          "label": "Texte pour afficher une « solution personnalisée »"
         },
         {
           "label": "Impossible de générer les mots-croisés",
