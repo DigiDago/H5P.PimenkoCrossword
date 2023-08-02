@@ -448,6 +448,8 @@
         "widget": "html",
         "importance": "low",
         "default": "",
+        "common": true,
+        "optional": true,
         "tags": [
           "strong",
           "em",

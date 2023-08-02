@@ -357,9 +357,16 @@ export default class Crossword extends H5P.Question {
 
     // Show custome solution text.
     if (this.params.l10n.solutionCustomText !== null) {
-      let htmlcontentsolutiontext = document.createElement('div');
+      let htmlcontentsolutiontext;
+
+      if (!document.querySelector(".h5p-question-solutioncustomtext")) {
+        htmlcontentsolutiontext = document.createElement('div');
+        htmlcontentsolutiontext.classList.add('h5p-question-solutioncustomtext');
+      } else {
+        htmlcontentsolutiontext = document.querySelector(".h5p-question-solutioncustomtext");
+      }
+
       htmlcontentsolutiontext.innerHTML = this.params.l10n.solutionCustomText;
-      htmlcontentsolutiontext.classList.add('h5p-question-solutioncustomtext');
 
       let feedbackElement = document.querySelector(".h5p-question-buttons");
       feedbackElement.parentNode.insertBefore(htmlcontentsolutiontext, feedbackElement);
@@ -402,6 +409,10 @@ export default class Crossword extends H5P.Question {
     }
 
     this.trigger('resize');
+
+    if(document.querySelector(".h5p-question-solutioncustomtext")) {
+      document.querySelector(".h5p-question-solutioncustomtext").innerHTML = '';
+    }
 
     this.removeFeedback();
 
