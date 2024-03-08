@@ -144,7 +144,7 @@ export default class CrosswordContent {
           across: this.params.l10n.across,
           down: this.params.l10n.down,
           extraClue: this.params.l10n.extraClue,
-          closeWindow: this.params.l10n.closeWindow
+          closeWindow: this.params.l10n.closeWindow,
         },
         a11y: this.params.a11y
       },
